@@ -4,8 +4,8 @@ from .views import ProductListApiView,ProductListCreateApiView, ProductListMixed
 urlpatterns=[
     path('productlar/', ProductListApiView.as_view()),
     path('product/create/', ProductListCreateApiView.as_view() ),
-    path('product/mixedupdate/<int:pk>', ProductListMixedUpdateApiView.as_view()),
-    path('product/detail/<int:pk>', ProductDetailApiView),
-    path('product/delete/<int:pk>', ProductDeleteApiView),
-    path('product/update/<int:pk>', ProductUpdateApiView)
+    path('product/mixedupdate/<int:pk>/', ProductListMixedUpdateApiView.as_view()),
+    path('product/<int:pk>/', ProductDetailApiView.as_view()),
+    path('product/delete/<int:pk>/', ProductDeleteApiView.as_view()),
+    path('product/update/<int:pk>/', ProductUpdateApiView.as_view())
 ]
